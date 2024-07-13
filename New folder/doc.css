@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+.navbar {
+    background-color: #ff6f00;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li {
+    display: inline;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #ff9800;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.vision-mission {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #fdd835;
+    text-align: center;
+}
+
+.vision-mission div {
+    width: 30%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.staff {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #fff9c4;
+}
+
+.staff-member {
+    text-align: center;
+    width: 20%;
+}
+
+.staff-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.scholarships {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #f3f3f3;
+}
+
+.scholarship img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-success {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.student-success h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.student {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.student img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffecb3;
+}
+
+.contact h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.social-media a img {
+    width: 50px;
+    margin: 0 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ff6f00;
+    color: white;
+}
+
+footer .map img {
+    width: 80%;
+    height: 800px;
+    border-radius: 100px;
+}

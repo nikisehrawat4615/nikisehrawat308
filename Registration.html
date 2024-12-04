@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        CBSE - Duplicate Academy Document System
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="js/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <!-- ui stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <form method="post" action="./frmRegistration.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1"
+        enctype="multipart/form-data">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="uNI0bjS4Xi3HA9Fur4Nu9nCn+Y6raGzWi//+5uY1uv1WzNdgaplVG5cxCl3GKF+Sm747QNs/T9xS6UnTvFLpvbLANe2EvKWFzn6DilygRSNFnETvW2kKWjOedJfnCG7iNHdk/ZFL2tCGmZ0n1mTTJWvTuEl4rdbsr29Te8VxM/hhOfr12pg33QK21adeobZV5Ve29DU9bSG2TaLMjuiEreQ0xIhx1IzSoAaW0X0+x58Kfl2pyYiCPXvv1JvWG4Xr2nxPdTSVp7g73xog+QcBTt84gTlHOLLrM9xJaAlexinbuC+LqPugtOpGpKHKNCKo0zX9hC1Rn8ogGafLnuvvg5x4aZtcV4WpIf73tvi9gmRfZEIpjXfr3FQF7hBakqejNPXB8qdRAHglT8AGwyc/AW/Pv00DmN/MLf5e9tveVTQf56WdyM+EJS5dluwmQl+i4cOKicZY3TXiEGbkRcmts5wwcfpLL6W+zJxIE/bgvLg12UBpoC6MCaaokeRKFsggz1bWWKlHAazQB8HDZzb5E0KgreuAeXbRU/L8EcwEmEKel/w/ytxoVvM7VK6mvBItCBOsF7ZReMgYd3ZNCjf8LRqSxXoJ3orZpd8EI3oUNhGOyNus4kW+aHNLQBN/xZG2MtgfhvYRSt1er6+IjtAzB+VTrs2deViKDTr0sfAOrUbTJtLT5Hvz63+bwBUN5HT2G46NXVOOa1YZYi85j4q6CtZkq+qG4YfRZh0vtFZXmkjc98rXjL64iRMyqtgiV64J6YyiDQo3i1VpAd7FuP1Kt9fh5sxUOGyrwXBQVwvhS85lz4A67yoziZSL6h/EvL52lA8bofCKLCUls94kRcld05EtqP9pppXZrZlgWNAIM5xnk0vzOYs+GBYgkUIqAIYUBsp84z4f+71vjsUEVjpoSm6VLRnxItuluSJjJgyIHf3rz6+xGDQ4EPf3DEeBkdU+Fal6/n0ksJc4ph0r5gH+fZpa4rRe7ArBmlJ8sOyGALgADhh/ImV9cepnhxhoqnn053A3o0ptlOOfYSGmQWgD9Wj4dRfhzK3EfyEyoExQod3umBfv249sJLkjI7IqzanfNRAXLA5uhrHUOp5WmKRnfKRL9D2pPDUMvcK+qvy0VUQwK6wwOnFdbx6DVSBDitfNbB+e8qDe7Z1upk/yOGDD2U/ohXHWi7ogGu0tLfhTR3qjOgGs34NYsXEJqKXRXdNmmi0VSFB0EBJNBDiSiewpD2doguHP1IyEjvt8xI5ZSADc8B7U0imYovHZ1hyavEMhEZmpqlPxX+0VOc1z6rMD9TB4k6koOFYHD6wo4tN2QSw6HzyNAq4Sv1VgkJNUcvZkpOwgpuDhm3Zupllc5QPL0PVnQKUMvVSwynmzw28nXSHm4SzN+3XwKEv9ra7AqV65TgHZB/KYsAs11MSdnartrfjf4B9JhKPOb/CBWx2/KYuqoN1a0MTQQ5k0pKSnTK3nZ7iwgu3Tk6w/Qs4q8sJ5m99Zv++u4javbJzYE/bgz/53CAyW96cr67jvXGsZo/71mRHuS7qsvVNZUe4A1XV6/N25pmcfIts85J9sVZAejoHMJMk5HPJX8N3sDk/zIUtxtYrBocio9Qb+Op3dB8GCVTkB157k2etV/n4KZO2Qi39xOnbq0BBtWRh24Nh2pDKuKG4dG3NolZL9e2vP5rAbTHov9W8/Pu5SWqqj2BqqAuKasMChleOIzdRUIq0WQX7ONsExaZOp/WCCu3aUWx+4HDrcPHCUju4oeIERUUedYc7/nibyGX8xNMcGX4xBgaBzOxwoqDL8hWcawnWYpQt8LaO+6PX6tqVARzOk+kKEz5PZZY6H5za3CtY8oUkdok/08vMgKpjLf412HyRaeU82SeRy5ziN1oK9NJ8eLZRElMMQ6R3GdQL0ZLM3wSWABmxVe3SB9frJrStBcFFNGqpVL3LyCMcCJaV3L8kCSNCrWulq6JCy5wBmQh9BKQHbeoCwJDJm8lrVTcA4rE4j3WtGXJourC673wyl1MHIO34gsLWugu1/Pa2DjS5RfCdjlBjPmW6zNxMXN8NB0Dz2aqE+orVEm3ryu1Cjj+/ESr6fALfNoW2+dJSQF+9NjkGhssoiXqjiAPhuspszdcjG9cSxCFD6BeaELWFK3sj8dJMzP3P8a1Ry+6Qxq2gAtiTUrCLTFRbI1LnE/4HiUrw/49AX9qwmDadx4F6ORD7NGO/l7Yg9FRSz1PtAVGP6vtt9WVzmrRoOcyve0qbDX32m/KhHEFceNxe2Ns3t+nK9WviFow4zGgqgy0sfWIW043nqvi8eK24ZrLTTtznyjwrnX4khmWhs/A/rqIFckda4bMxSdcIsNyVPpqfC2NN49NY3J7M97a96ovrBci7n6yUnpt3SaXHYCgT83kxPtrVxl3p80J6wW5pgGafdhgQaVGChuW12J1t0cGQt75U4nu5Vz9QDAGK7JJuW0Tab7Gjv0m8+fjZDVY1SDbIpHHEj/tLCPMm+EhwvUBy3hQRh6ZGg6b3G2JW2Co+24d1V1wYPigvO3eq72sc9Jed5BO6c1BE3NylFVQG8NTXicO9mEWjdCiTiOUMxOG2pYVNBJ+HA+ecnZ1S35u690p805uGW24NBLB4x0MlzD3afKRpcO0jN9a8gQhv8C8gzNdDQzlG38BFZTosIkNXY+WJlkKL3JlnOufc7ywquC6MsXw8KmQHeI6G0b/8S6f7npxAyATtMmzMwSDL0Kl1YqEgAi4/rVlKesRJIv3/t1WZo62HQBNxeZkVjkfpcyuQ+r4OUG3lGnorX9TVXaV0V0WJQONUR+DuU3x2dEL7eul5Jo904SU5xN15ONSV7ocEv9NXQtmvxhakq+PBcGZG6YAPEHW++/67Rs+dQ1kfLe7LjUPQAeaSZIwj1NgwotLinrAtfrPDxs1Qo+eAjzkoc1By8JBehiz3Nqkde18IfyUtGwp/4/t1/QW4MDem1PDWFB65NehQQ8yUYoHqZ0mgbO3hk6jR8CwhhI/3zNSO9IjHbo/b5fXUR8E8fgo18lx8Woyeo9M1Peg20NQly4UlpkAVkQRgPCpwXD63IuTAwSo1pigziFLkkB29wReJ18MVsORYwT6cA4hv5VEVeWOGtcmCnl7wY5i+S0D6s0VYJoFkeewYUnoY7QBzNYaSF6Yr/FmmYggkaZUp/X7/ANDeVkHmfFwpDEIcyOtTNVGkPbfewNlR+9IQxBl5T9aVPXHBlp0mWzPu3akYp/dGu/I7TskDxw0hPofFx7h7FBo63rpM2FNAuj/Ra5CPTjbmdIxgWZNv9gfdGvIq1cSUsYg0lYDjnGuTnq8Cy/uk33ZGQbTYZfz/FNLcHiueVVA+gY3cZUyJw5eFr29XbP2TyAJYAzOdg5abNbIpBOpT5HcU5h62FlPpTvdo4bCaf8ysr8OYeHLnJuZrRDEoOppWlcyEhKId0mUdYys4KAuTGNaPaYqd7xTNWgbHI1oh1OjgunT+XkQ7d3nH/kfgdxYbWcVVE+XJ6K5K/4QtppthtyQDug/GFXF+fw830mK/AZR4lyoF9TyDKFg0YO+8/6my5SHpnj7aSa+448iV/uh5eYNqXoJqoBnBTHX0XTg6OFfpTfHqH661VQiwVpjYIPAaLAzHPLQPlwNvOZ57Q/9rsnzj19kZ0fFERzEC2m/sY5Ttfl03zCauYqkYGzRbY5X/Ybsvk8QBGYMTbfl0VGk/1uZrVEs9v7V/OWFyqjzqDRILVV3qmudgYUM2tsdj4GPgSEI4ly/zR43yftpA9FkvljJG4aIgEKxgijekvlm4zdnyRVWHbHa+aL9cgjeKRiuIKvB5v5YfVTYU8hztahwQu9oI7mQ2jV8SCkn2anFQzOKfFg+xHJvjEYJHojMIeRGs8Mi8zyr8HdsPehGZiXc3JU8eFCeUlVNo6iKFT+srgQQr0EgjELfkVNkIvWXVNhLKA3u5+ecKeFf+hcKZklUhLt3uNQmvIBFDluFtBwyqBHyAiO/rnxppV4tB2fNUCuCybL5gII2fkldw/lPuvGmSmglgfsrx+LhWJ0t7uMU0vTH/Vzg7pRSei7f7LvfVCfFHI5Q8t2qWnBWQQ9BJdm669jyns0ZLnUBV0J+5ktd2Drhb3UJvkD6NegUYY936QgMGv6oJVzYiVID7Mqm+2Oykwp7ssJ15P9xpZPS8N/A62qgsEt4tLUN2W6HqEurY7U2wJIiZ6aYWst2hz0qcngGajZzDNYDM4l1hTnl8kj1hBI3HxOlu2JhLZ3isWrgUuj37Yv22eK2MhNS+7FBirU6uGxgU1PN0A2V1Ea0Z8Y02eTGueyETyJz6youK9IvoyhIIEJ3/wbQyWwNkXagCdrO/NSJYJgHmnpyF98Gt84e3J7651YIs5OYLVjL1eEKZExndA+nWoYmUsS/fIviy7Ell/BSGrjwZO5Uv1VjWCUX7u0gWUm9Awf3v+YbR3CgleJD5citqDdQJ2UeuXTMdF6wqvPx7QlF2vxfrFZgJeUT8m6NMerrBJVrbuGkYiH1OfnVCrrnAQE2acI6/a6GETxL7rsPjMlgIip7asNTELLLIVJn9y9vHgCYkN0YZR22Kc+NdKAmY2bV3BG6eYetXR2yQN0astsahdd6MaFPn4Xe6t9I1Gjk/8p1RFmk+d4nA6EPU=" />
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['form1'];
+            if (!theForm) {
+                theForm = document.form1;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+            //]]>
+        </script>
+
+
+        <script
+            src="/cbse/web/dads/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZAlyaUUF01xkzcndowvVc-rRa-e6YXmNUrcfIlEkDdRc4N1gk5r__0Tr08lQVA9rSw2&amp;t=638562759717896622"
+            type="text/javascript"></script>
+
+
+        <script
+            src="/cbse/web/dads/ScriptResource.axd?d=nv7asgRUU0tRmHNR2D6t1JSIfJ1Qn-3CIORHan4kClo1_5jr5R5qsz6jdhOs-7njyIcskd1gv6FGs3BXfiBPeBOIKAzxfBcRbZJvE4uu--4IiP2EHw2TCn2KdBce5cEiVo4v0mLRY9rQPB8gbV_1Mw2&amp;t=ffffffffedc3492c"
+            type="text/javascript"></script>
+        <script
+            src="/cbse/web/dads/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvnWBR721S3mD5nuamQ14LBa2rrAyFeC_23PWtum6DiGxD9OwuibBHqSwBdAvyWUbcMQ-jGKkWFWmIB-Yn4jMbh7hDroRE_EDOXCvJYk_MZMrVA-dMagHAMqD1PHc_Sjh-ZbSNQ4EGAuRzEwVmInQqZk1&amp;t=7a0cc936"
+            type="text/javascript"></script>
+        <script
+            src="/cbse/web/dads/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OB56USxbf5Rdd3kGNv3SWJrRZTPzC0H9VtqIXYFmXlA5ZYcYEYPwBJM0s5T-mBohXCaLSXdLr3ztTL_EB8AWTEeqMd9XcJfRW785YolLk_Em0Jcenc3uFD-yDnovlgqRXb5iGl75gOb0kyhhpNUG3wg1&amp;t=7a0cc936"
+            type="text/javascript"></script>
+        <script type="text/javascript">
+            //<![CDATA[
+            function WebForm_OnSubmit() {
+                if (typeof (ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+                return true;
+            }
+            //]]>
+        </script>
+
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5198E631" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                value="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" />
+        </div>
+        <div>
+
+
+            <header class="headerMain">
+                <div class="container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img alt="CBSE" src="images/cbselogo.jpg" />
+                        </a>
+                    </div>
+                    <div class="secLogo">
+                        <center>
+                            <h1>Duplicate Academic Document System</h1>
+                            <br />
+                            <h5>(Marksheet, Migration and Pass-Certificate)</h5>
+                        </center>
+                    </div>
+                    <div class="secLogo">
+                        <img alt="CBSE" src="images/digital-cbse-logo.png" />
+                    </div>
+                </div>
+            </header>
+
+            <script type="text/javascript">
+                //<![CDATA[
+                Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$sm', 'form1', ['tctl00$ContentPlaceHolder1$up', 'ContentPlaceHolder1_up'], [], [], 90, 'ctl00');
+                //]]>
+            </script>
+
+            <div class="container">
+                <div class="form-group">
+                    <div class="prevRow">
+                        <div class="col-lg-12 prevLink">
+                            <a href="List.aspx">Back to Previous Page</a>
+                        </div>
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnRowid"
+                            id="ContentPlaceHolder1_hdnRowid" />
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnRegion"
+                            id="ContentPlaceHolder1_hdnRegion" value="H" />
+                        <input type="hidden" name="ctl00$ContentPlaceHolder1$hdnschno" id="ContentPlaceHolder1_hdnschno"
+                            value="41140" />
+                    </div>
+                    <div id="ContentPlaceHolder1_div_search">
+                        <div class="CondidateInfoBlk">
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <span id="ContentPlaceHolder1_lbl_Standar" class="control-label"
+                                        style="font-weight:bold;">Select Class</span>
+                                    <select name="ctl00$ContentPlaceHolder1$ddlClass" id="ContentPlaceHolder1_ddlClass"
+                                        class="form-control">
+                                        <option value="0">Select</option>
+                                        <option value="1">10th</option>
+                                        <option selected="selected" value="2">12th</option>
+
+                                    </select>
+                                    <span id="ContentPlaceHolder1_req_ddlClass" style="color:Red;display:none;">Please
+                                        Select Class</span>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <span id="ContentPlaceHolder1_lblRollNo" class="control-label"
+                                        style="font-weight:bold;">Candidate Roll No.</span>
+                                    <input name="ctl00$ContentPlaceHolder1$txtRollNo" type="text" value="17708396"
+                                        maxlength="8" id="ContentPlaceHolder1_txtRollNo" class="form-control"
+                                        placeholder="xxxxxxx" autocomplete="off" />
+                                    <span id="ContentPlaceHolder1_req_txtRollNo" style="color:Red;display:none;">Please
+                                        Enter Roll No</span>
+                                </div>
+                                <div class="col-lg-6">
+                                    <span id="ContentPlaceHolder1_lblYear" class="control-label"
+                                        style="font-weight:bold;">Passing Year</span>
+                                    <select name="ctl00$ContentPlaceHolder1$ddlYear"
+                                        onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlYear\&#39;,\&#39;\&#39;)&#39;, 0)"
+                                        id="ContentPlaceHolder1_ddlYear" class="form-control">
+                                        <option value="0">Year</option>
+                                        <option value="1975">1975</option>
+                                        <option value="1976">1976</option>
+                                        <option value="1977">1977</option>
+                                        <option value="1978">1978</option>
+                                        <option value="1979">1979</option>
+                                        <option value="1980">1980</option>
+                                        <option value="1981">1981</option>
+                                        <option value="1982">1982</option>
+                                        <option value="1983">1983</option>
+                                        <option value="1984">1984</option>
+                                        <option value="1985">1985</option>
+                                        <option value="1986">1986</option>
+                                        <option value="1987">1987</option>
+                                        <option value="1988">1988</option>
+                                        <option value="1989">1989</option>
+                                        <option value="1990">1990</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1999">1999</option>
+                                        <option value="2000">2000</option>
+                                        <option value="2001">2001</option>
+                                        <option value="2002">2002</option>
+                                        <option value="2003">2003</option>
+                                        <option value="2004">2004</option>
+                                        <option value="2005">2005</option>
+                                        <option value="2006">2006</option>
+                                        <option value="2007">2007</option>
+                                        <option value="2008">2008</option>
+                                        <option value="2009">2009</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2011">2011</option>
+                                        <option value="2012">2012</option>
+                                        <option value="2013">2013</option>
+                                        <option value="2014">2014</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option selected="selected" value="2023">2023</option>
+                                        <option value="2024">2024</option>
+
+                                    </select>
+                                    <span id="ContentPlaceHolder1_req_ddlYear" style="color:Red;display:none;">Please
+                                        Passing Year</span>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <div>
+                                        <span id="ContentPlaceHolder1_Label1" class="control-label"
+                                            style="font-weight:bold;">Candidate Name</span><br />
+                                        <span style="color: red"><i>(as per document)</i></span>
+                                    </div>
+                                    <input name="ctl00$ContentPlaceHolder1$txtCname" type="text" value="Reshma"
+                                        maxlength="35" id="ContentPlaceHolder1_txtCname" class="form-control"
+                                        placeholder="xxxxxxx" autocomplete="off" />
+                                    <span id="ContentPlaceHolder1_RequiredFieldValidator1"
+                                        style="color:Red;display:none;">Please Enter Candidate Name</span>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div>
+                                        <span id="ContentPlaceHolder1_Label2" class="control-label"
+                                            style="font-weight:bold;">Father Name</span><br />
+                                        <span style="color: red"><i>(as per document)</i></span>
+                                    </div>
+                                    <input name="ctl00$ContentPlaceHolder1$txtfname" type="text" value="Ramratan"
+                                        maxlength="35" id="ContentPlaceHolder1_txtfname" class="form-control"
+                                        placeholder="xxxxxxx" autocomplete="off" />
+                                    <span id="ContentPlaceHolder1_RequiredFieldValidator2"
+                                        style="color:Red;display:none;">Please Enter Father Name</span>
+                                </div>
+                            </div>
+
+                            <div class="row form-group">
+                                <div class="col-lg-6">
+                                    <span id="ContentPlaceHolder1_Label3" class="control-label"
+                                        style="font-weight:bold;">Mobile No</span>
+                                    <div class="input-group">
+                                        <input name="ctl00$ContentPlaceHolder1$txtMobileNo" type="text"
+                                            value="9813623169" maxlength="10" id="ContentPlaceHolder1_txtMobileNo"
+                                            disabled="disabled" class="aspNetDisabled form-control"
+                                            placeholder="xxxxxxx" autocomplete="off" />
+
+                                        <span id="ContentPlaceHolder1_RequiredFieldValidator3"
+                                            style="color:Red;display:none;">Please Enter Mobile No</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <span id="ContentPlaceHolder1_Label5" class="control-label"
+                                        style="font-weight:bold;">Verify OTP</span>
+                                    <div class="input-group">
+                                        <input name="ctl00$ContentPlaceHolder1$txtverifymobileotp" type="text"
+                                            value="12436" maxlength="5" id="ContentPlaceHolder1_txtverifymobileotp"
+                                            disabled="disabled" class="aspNetDisabled form-control"
+                                            placeholder="xxxxxxx" autocomplete="off" />
+
+                                        <span id="ContentPlaceHolder1_RequiredFieldValidator5"
+                                            style="color:Red;display:none;">Please Enter Verify OTP</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row form-group mb-30">
+                                <div class="col-lg-6">
+                                    <span id="ContentPlaceHolder1_Label4" class="control-label"
+                                        style="font-weight:bold;">Email ID</span>
+                                    <div class="input-group">
+                                        <input name="ctl00$ContentPlaceHolder1$txtEmail" type="text"
+                                            value="nikisehrawat989@gmail.com" maxlength="35"
+                                            id="ContentPlaceHolder1_txtEmail" disabled="disabled"
+                                            class="aspNetDisabled form-control" placeholder="xxxxxxx"
+                                            autocomplete="off" />
+
+                                        <span id="ContentPlaceHolder1_RequiredFieldValidator4"
+                                            style="color:Red;display:none;">Please Enter Email ID</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <span id="ContentPlaceHolder1_Label6" class="control-label"
+                                        style="font-weight:bold;">Verify OTP</span>
+                                    <div class="input-group">
+                                        <input name="ctl00$ContentPlaceHolder1$txtverifyemailotp" type="text"
+                                            value="12436" maxlength="5" id="ContentPlaceHolder1_txtverifyemailotp"
+                                            disabled="disabled" class="aspNetDisabled form-control"
+                                            placeholder="xxxxxxx" autocomplete="off" />
+
+                                        <span id="ContentPlaceHolder1_RequiredFieldValidator6"
+                                            style="color:Red;display:none;">Please Enter Verify OTP</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12" style="text-align: center;">
+                                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnSearch" value="Search"
+                                        onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSearch&quot;, &quot;&quot;, true, &quot;a&quot;, &quot;&quot;, false, false))"
+                                        id="ContentPlaceHolder1_btnSearch" class="btn btn-sm btn-info" />
+                                    <br />
+                                    <span id="ContentPlaceHolder1_lblerror" class="control-label"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-6" style="text-align: center;">
+
+
+
+
+                            <div class="col-lg-3"></div>
+                        </div>
+                    </div>
+                    <div class="borderBottom"></div>
+
+                    <div id="ContentPlaceHolder1_div_details" class="mb-40">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h5><u><span>Student Details</span></u></h5>
+                            </div>
+                        </div>
+                        <div class="groove mb-30">
+                            <div class="table-responsive">
+                                <table class="table table-bordered mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th width="40%" class="tHeading">Particulars</th>
+                                            <th width="60%" class="tHeading">Details</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <strong><label class="control-label">Name of the
+                                                        Candidate</label></strong>
+                                            </td>
+                                            <td>
+                                                <span id="ContentPlaceHolder1_lblNameCondidate"
+                                                    class="control-label">RESHMA</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><label class="control-label">Date of Birth</label></strong>
+                                            </td>
+                                            <td>
+                                                <span id="ContentPlaceHolder1_lblDob"
+                                                    class="control-label">XXXXXXXX</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><label class="control-label">Father's Name</label></strong>
+                                            </td>
+                                            <td>
+                                                <span id="ContentPlaceHolder1_lblFatherName"
+                                                    class="control-label">RAMRATAN</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><label class="control-label">Mother's Name</label></strong>
+                                            </td>
+                                            <td>
+                                                <span id="ContentPlaceHolder1_lblMotherName"
+                                                    class="control-label">SANTOSH</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong><label class="control-label">Class</label></strong>
+                                            </td>
+                                            <td>
+                                                <span id="ContentPlaceHolder1_lblClass" class="control-label">Class
+                                                    XII</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h5><u><span>Address for Dispatch</span></u></h5>
+                            </div>
+                        </div>
+                        <div id="ContentPlaceHolder1_up">
+
+                            <div class="CondidateInfoBlk mb-30">
+                                <div class="row form-group">
+                                    <div class="col-lg-6">
+                                        <label class="control-label">Country</label>
+                                        <select name="ctl00$ContentPlaceHolder1$ddlCountry"
+                                            onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlCountry\&#39;,\&#39;\&#39;)&#39;, 0)"
+                                            id="ContentPlaceHolder1_ddlCountry" class="form-control">
+                                            <option value="0">Select</option>
+                                            <option selected="selected" value="1">INDIA</option>
+                                            <option value="2">FOREIGN</option>
+
+                                        </select>
+                                        <span id="req_ddlCountry" style="color:Red;font-size:Small;display:none;">Please
+                                            select country.</span>
+                                    </div>
+
+                                </div>
+                                <div id="ContentPlaceHolder1_div_india">
+                                    <div class="row form-group">
+                                        <div class="col-lg-6">
+                                            <label class="control-label">Address 1 </label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtAddress1" type="text" value="781"
+                                                id="ContentPlaceHolder1_txtAddress1" class="form-control"
+                                                autocomplete="off" placeholder="H.No/ Flat No." />
+                                            <span id="ContentPlaceHolder1_req_txtAddress1"
+                                                style="color:Red;display:none;">Address should not be empty.</span>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label class="control-label">Address 2</label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtAddress2" type="text"
+                                                value="Karhans" id="ContentPlaceHolder1_txtAddress2"
+                                                class="form-control" autocomplete="off"
+                                                placeholder="Street/lane/Area" />
+                                            <span id="ContentPlaceHolder1_req_txtAddress2"
+                                                style="color:Red;display:none;">Address should not be empty.</span>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-lg-6">
+                                            <label class="control-label">Address 3</label>
+                                            <input name="ctl00$ContentPlaceHolder1$txtAddress3" type="text"
+                                                value="Karhans" id="ContentPlaceHolder1_txtAddress3"
+                                                class="form-control" autocomplete="off" />
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label class="control-label">State</label>
+                                            <select name="ctl00$ContentPlaceHolder1$ddlState"
+                                                onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlState\&#39;,\&#39;\&#39;)&#39;, 0)"
+                                                id="ContentPlaceHolder1_ddlState" class="form-control">
+                                                <option value="0">Select State</option>
+                                                <option value="25">ANDAMAN &amp; NICOBAR</option>
+                                                <option value="1">ANDHRA PRADESH</option>
+                                                <option value="22">ARUNACHAL PRADESH</option>
+                                                <option value="2">ASSAM</option>
+                                                <option value="3">BIHAR</option>
+                                                <option value="26">CHANDIGARH</option>
+                                                <option value="33">CHATTISGARH</option>
+                                                <option value="30">DADAR &amp; NAGAR HAVELI</option>
+                                                <option value="31">DAMAN &amp; DIU</option>
+                                                <option value="27">DELHI</option>
+                                                <option value="28">GOA</option>
+                                                <option value="4">GUJARAT</option>
+                                                <option selected="selected" value="5">HARYANA</option>
+                                                <option value="6">HIMACHAL PRADESH</option>
+                                                <option value="7">JAMMU &amp; KASHMIR</option>
+                                                <option value="34">JHARKHAND</option>
+                                                <option value="8">KARNATAKA</option>
+                                                <option value="9">KERALA</option>
+                                                <option value="37">LADAKH</option>
+                                                <option value="32">LAKSHADWEEP</option>
+                                                <option value="10">MADHYA PRADESH</option>
+                                                <option value="11">MAHARASHTRA</option>
+                                                <option value="12">MANIPUR</option>
+                                                <option value="13">MEGHALAYA</option>
+                                                <option value="23">MIZORAM</option>
+                                                <option value="14">NAGALAND</option>
+                                                <option value="15">ODISHA</option>
+                                                <option value="29">PUDUCHERRY</option>
+                                                <option value="16">PUNJAB</option>
+                                                <option value="17">RAJASTHAN</option>
+                                                <option value="18">SIKKIM</option>
+                                                <option value="19">TAMILNADU</option>
+                                                <option value="36">TELANGANA</option>
+                                                <option value="20">TRIPURA</option>
+                                                <option value="21">UTTAR PRADESH</option>
+                                                <option value="35">UTTARAKHAND</option>
+                                                <option value="24">WEST BENGAL</option>
+
+                                            </select>
+                                            <span id="req_ddlState"
+                                                style="color:Red;font-size:Small;display:none;">Please select
+                                                State.</span>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-lg-6">
+                                            <label class="control-label">District</label>
+                                            <select name="ctl00$ContentPlaceHolder1$ddlDistrict"
+                                                onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlDistrict\&#39;,\&#39;\&#39;)&#39;, 0)"
+                                                id="ContentPlaceHolder1_ddlDistrict" class="form-control">
+                                                <option value="0">Select District</option>
+                                                <option value="01">AMBALA</option>
+                                                <option value="02">BHIWANI</option>
+                                                <option value="23">CHARKHI DADRI</option>
+                                                <option value="03">FARIDABAD</option>
+                                                <option value="04">FATEHABAD</option>
+                                                <option value="05">GURUGRAM</option>
+                                                <option value="06">HISSAR</option>
+                                                <option value="07">JHAJJAR</option>
+                                                <option value="08">JIND</option>
+                                                <option value="09">KAITHAL</option>
+                                                <option value="10">KARNAL</option>
+                                                <option value="11">KURUKSHETRA</option>
+                                                <option value="12">MAHENDRAGARH</option>
+                                                <option value="22">MEWAT</option>
+                                                <option value="13">NARNAUL</option>
+                                                <option value="21">PALWAL</option>
+                                                <option value="14">PANCHKULA</option>
+                                                <option selected="selected" value="15">PANIPAT</option>
+                                                <option value="16">REWARI</option>
+                                                <option value="17">ROHTAK</option>
+                                                <option value="18">SIRSA</option>
+                                                <option value="19">SONIPAT</option>
+                                                <option value="20">YAMUNANAGAR</option>
+
+                                            </select>
+                                            <span id="req_ddlDistrict"
+                                                style="color:Red;font-size:Small;display:none;">Please select
+                                                District.</span>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label class="control-label">Pin Code</label>
+                                            <select name="ctl00$ContentPlaceHolder1$ddlPincode"
+                                                onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlPincode\&#39;,\&#39;\&#39;)&#39;, 0)"
+                                                id="ContentPlaceHolder1_ddlPincode" class="form-control">
+                                                <option value="0">Select</option>
+                                                <option value="100">Other</option>
+                                                <option value="126101">126101</option>
+                                                <option value="126102">126102</option>
+                                                <option value="126111">126111</option>
+                                                <option value="126112">126112</option>
+                                                <option value="126113">126113</option>
+                                                <option value="126114">126114</option>
+                                                <option value="126115">126115</option>
+                                                <option value="126116">126116</option>
+                                                <option value="126125">126125</option>
+                                                <option value="132001">132001</option>
+                                                <option value="132022">132022</option>
+                                                <option value="132023">132023</option>
+                                                <option value="132024">132024</option>
+                                                <option value="132036">132036</option>
+                                                <option value="132037">132037</option>
+                                                <option value="132039">132039</option>
+                                                <option value="132041">132041</option>
+                                                <option value="132046">132046</option>
+                                                <option value="132054">132054</option>
+                                                <option selected="selected" value="132101">132101</option>
+                                                <option value="132103">132103</option>
+                                                <option value="132104">132104</option>
+                                                <option value="132105">132105</option>
+                                                <option value="132106">132106</option>
+                                                <option value="132107">132107</option>
+                                                <option value="132108">132108</option>
+                                                <option value="132113">132113</option>
+                                                <option value="132114">132114</option>
+                                                <option value="132116">132116</option>
+                                                <option value="132117">132117</option>
+                                                <option value="132122">132122</option>
+                                                <option value="132140">132140</option>
+                                                <option value="132145">132145</option>
+                                                <option value="132157">132157</option>
+
+                                            </select>
+                                            <span id="ContentPlaceHolder1_req_ddlPincode"
+                                                style="color:Red;display:none;">Please select pincode.</span>
+
+                                            <span id="ContentPlaceHolder1_req_txtPincode" style="color:Red;"></span>
+                                            <span id="reg_txtPincode"
+                                                style="color:Red;font-size:Small;display:none;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-lg-6">
+                                        <label class="control-label">Working Mobile Number</label>
+                                        <input name="ctl00$ContentPlaceHolder1$txtMobile" type="text" value="9671123169"
+                                            maxlength="10" id="ContentPlaceHolder1_txtMobile" class="form-control"
+                                            autocomplete="off" placeholder="xxxxxxxxx" />
+                                        <span id="req_txtMobile" style="color:Red;display:none;">Please enter mobile
+                                            no.</span>
+
+
+                                        <span id="reg_txtMobile" style="color:Red;display:none;">Invalid Mobile
+                                            Number.</span>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label class="control-label">Dispatch Mode</label>
+                                        <table id="ContentPlaceHolder1_rpdispatchmode"
+                                            class="form-control mb-10 radioBtnBlk">
+                                            <tr>
+                                                <td><input id="ContentPlaceHolder1_rpdispatchmode_0" type="radio"
+                                                        name="ctl00$ContentPlaceHolder1$rpdispatchmode" value="1"
+                                                        checked="checked" /><label
+                                                        for="ContentPlaceHolder1_rpdispatchmode_0"> By Post</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input id="ContentPlaceHolder1_rpdispatchmode_1" type="radio"
+                                                        name="ctl00$ContentPlaceHolder1$rpdispatchmode"
+                                                        value="2" /><label for="ContentPlaceHolder1_rpdispatchmode_1">
+                                                        By Hand</label></td>
+                                            </tr>
+                                        </table>
+                                        <span id="req_rpdispatchmode" style="color:Red;display:none;">Please enter
+                                            mobile no.</span>
+                                        <div class="input-group radioBtnBlk radioBtnBlk2">
+                                            <span class="form-control"><input id="ContentPlaceHolder1_chkUrgent"
+                                                    type="checkbox" name="ctl00$ContentPlaceHolder1$chkUrgent" /><label
+                                                    for="ContentPlaceHolder1_chkUrgent">Urgent</label></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h5><u>Document</u></h5>
+                            </div>
+                        </div>
+                        <div class="CondidateInfoBlk mb-30">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <label class="control-label">Required Document(s)</label>
+
+                                    <table id="ContentPlaceHolder1_chkRequireList" class="radioBtnBlk">
+                                        <tr>
+                                            <td><span style="display:none;"><input
+                                                        id="ContentPlaceHolder1_chkRequireList_0" type="checkbox"
+                                                        name="ctl00$ContentPlaceHolder1$chkRequireList$0"
+                                                        value="1" /><label
+                                                        for="ContentPlaceHolder1_chkRequireList_0">Duplicate
+                                                        Certificate</label></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span style="display:none;"><input
+                                                        id="ContentPlaceHolder1_chkRequireList_1" type="checkbox"
+                                                        name="ctl00$ContentPlaceHolder1$chkRequireList$1"
+                                                        value="2" /><label
+                                                        for="ContentPlaceHolder1_chkRequireList_1">Marksheet</label></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span style="display:block;"><input
+                                                        id="ContentPlaceHolder1_chkRequireList_2" type="checkbox"
+                                                        name="ctl00$ContentPlaceHolder1$chkRequireList$2"
+                                                        checked="checked" value="3" /><label
+                                                        for="ContentPlaceHolder1_chkRequireList_2">Migration</label></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><span style="display:none;"><input
+                                                        id="ContentPlaceHolder1_chkRequireList_3" type="checkbox"
+                                                        name="ctl00$ContentPlaceHolder1$chkRequireList$3"
+                                                        value="4" /><label
+                                                        for="ContentPlaceHolder1_chkRequireList_3">Grade Sheet Cum
+                                                        Certificate</label></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span style="display:block;"><input
+                                                        id="ContentPlaceHolder1_chkRequireList_4" type="checkbox"
+                                                        name="ctl00$ContentPlaceHolder1$chkRequireList$4"
+                                                        value="5" /><label
+                                                        for="ContentPlaceHolder1_chkRequireList_4">Marks Statement Cum
+                                                        Certificate</label></span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-lg-6">
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h5><u>Document Upload</u></h5>
+                            </div>
+                        </div>
+                        <div class="CondidateInfoBlk mb-30">
+                            <div class="row form-group align-items-end">
+                                <div class="col-lg-6">
+                                    <label class="control-label">Upload Aadhaar/PAN/Pass-Port/Govt Issued Photo
+                                        Id</label>
+
+                                    <span id="ContentPlaceHolder1_lblPhoto" class="control-label">Reshma Doc.
+                                        File.pdf</span>
+                                    <span id="ContentPlaceHolder1_req_fu_photo_id"
+                                        style="color:Red;display:none;">Please Choose mention Photo Id proof</span>
+                                </div>
+                                <div class="col-lg-6">
+                                    <a id="ContentPlaceHolder1_lnkbtnVPhoto" class="btn btn-primary"
+                                        href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$lnkbtnVPhoto&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">View</a>
+
+                                </div>
+                            </div>
+                            <div class="row form-group align-items-end">
+                                <div class="col-lg-6">
+                                    <label class="control-label">Upload a copies of certificates that are required (if
+                                        available)</label>
+
+                                    <span id="ContentPlaceHolder1_lblCert" class="control-label">Reshma Doc.
+                                        File.pdf</span>
+
+                                </div>
+                                <div class="col-lg-6">
+                                    <a id="ContentPlaceHolder1_lnkbtnVCertificate" class="btn btn-primary"
+                                        href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$lnkbtnVCertificate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">View</a>
+
+                                </div>
+                            </div>
+                            <div class="row form-group align-items-end">
+                                <div class="col-lg-6">
+                                    <label class="control-label">Upload a copy of the address proof of address for
+                                        delivery (if available)</label>
+
+                                    <span id="ContentPlaceHolder1_lblAddress" class="control-label">Reshma Doc.
+                                        File.pdf</span>
+
+                                </div>
+                                <div class="col-lg-6">
+                                    <a id="ContentPlaceHolder1_lnkbtnVAddress" class="btn btn-primary"
+                                        href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$lnkbtnVAddress&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">View</a>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <span id="ContentPlaceHolder1_lblreqMsg" class="control-label"
+                                        style="color:Red;"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 actionBtn">
+                                <input type="submit" name="ctl00$ContentPlaceHolder1$btnSave" value="Continue To Pay"
+                                    onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnSave&quot;, &quot;&quot;, true, &quot;b&quot;, &quot;&quot;, false, false))"
+                                    id="ContentPlaceHolder1_btnSave" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <footer class="container-fluid bg-grey footerCont">
+                <div class="container">
+                    <div class="row footerRow">
+                        <div class="col-lg-9 col-sm-9 col-xs-9">
+                            <div class="footer-widget">
+                                <h4 class="footer-title">Contact</h4>
+                                <ul class="footer-widget-list list-unstyled footerContact">
+                                    <li class="colorfooter"><i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <span>Address: Shiksha
+                                            Kendra-2,<br>
+                                            Community Centre, Preet Vihar, Delhi - 110092</span>
+                                    </li>
+                                    <li class="colorfooter"><i class="fa fa-phone" aria-hidden="true"></i>
+                                        <span>Tel: 011-22527183 (Technical Queries)
+                                        </span>
+                                    </li>
+                                    <li class="colorfooter emailItem">
+                                        <div class="emailDetail">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <span><a href="https://www.cbse.gov.in/cbsenew/contact-us.html"
+                                                    target="_blank">Regional Offices (Other Queries)</a></span>
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-sm-3 col-xs-3">
+                            <div class="footer-widget">
+                                <h4 class="footer-title">Media</h4>
+                                <ul class="footer-widget-list list-unstyled mediaList">
+                                    <li><a href="https://www.facebook.com/cbseindia29" target="_blank"><i
+                                                class="fa fa-facebook-square" aria-hidden="true"></i>Facebook</a></li>
+                                    <li><a href="https://twitter.com/cbseindia29" target="_blank"><i
+                                                class="fa fa-twitter" aria-hidden="true"></i>Twitter</a></li>
+                                    <li><a href="https://www.instagram.com/cbse_hq_1929/" target="_blank"><i
+                                                class="fa fa-instagram" aria-hidden="true"></i>Instagram</a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCAre7caIM9EvmD-mcSy6VyA?view_as=subscriber"
+                                            target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i>Youtube</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <p class="copyWrite">© 2021 IT Department CBSE. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var Page_Validators = new Array(document.getElementById("ContentPlaceHolder1_req_ddlClass"), document.getElementById("ContentPlaceHolder1_req_txtRollNo"), document.getElementById("ContentPlaceHolder1_req_ddlYear"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator1"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator2"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator3"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator5"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator4"), document.getElementById("ContentPlaceHolder1_RequiredFieldValidator6"), document.getElementById("req_ddlCountry"), document.getElementById("ContentPlaceHolder1_req_txtAddress1"), document.getElementById("ContentPlaceHolder1_req_txtAddress2"), document.getElementById("req_ddlState"), document.getElementById("req_ddlDistrict"), document.getElementById("ContentPlaceHolder1_req_ddlPincode"), document.getElementById("ContentPlaceHolder1_req_txtPincode"), document.getElementById("reg_txtPincode"), document.getElementById("req_txtMobile"), document.getElementById("reg_txtMobile"), document.getElementById("req_rpdispatchmode"), document.getElementById("ContentPlaceHolder1_req_fu_photo_id"));
+            //]]>
+        </script>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var ContentPlaceHolder1_req_ddlClass = document.all ? document.all["ContentPlaceHolder1_req_ddlClass"] : document.getElementById("ContentPlaceHolder1_req_ddlClass");
+            ContentPlaceHolder1_req_ddlClass.controltovalidate = "ContentPlaceHolder1_ddlClass";
+            ContentPlaceHolder1_req_ddlClass.focusOnError = "t";
+            ContentPlaceHolder1_req_ddlClass.errormessage = "Please Select Class";
+            ContentPlaceHolder1_req_ddlClass.display = "Dynamic";
+            ContentPlaceHolder1_req_ddlClass.validationGroup = "a";
+            ContentPlaceHolder1_req_ddlClass.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_req_ddlClass.initialvalue = "0";
+            var ContentPlaceHolder1_req_txtRollNo = document.all ? document.all["ContentPlaceHolder1_req_txtRollNo"] : document.getElementById("ContentPlaceHolder1_req_txtRollNo");
+            ContentPlaceHolder1_req_txtRollNo.controltovalidate = "ContentPlaceHolder1_txtRollNo";
+            ContentPlaceHolder1_req_txtRollNo.focusOnError = "t";
+            ContentPlaceHolder1_req_txtRollNo.errormessage = "Please Enter Roll No";
+            ContentPlaceHolder1_req_txtRollNo.display = "Dynamic";
+            ContentPlaceHolder1_req_txtRollNo.validationGroup = "a";
+            ContentPlaceHolder1_req_txtRollNo.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_req_txtRollNo.initialvalue = "";
+            var ContentPlaceHolder1_req_ddlYear = document.all ? document.all["ContentPlaceHolder1_req_ddlYear"] : document.getElementById("ContentPlaceHolder1_req_ddlYear");
+            ContentPlaceHolder1_req_ddlYear.controltovalidate = "ContentPlaceHolder1_ddlYear";
+            ContentPlaceHolder1_req_ddlYear.focusOnError = "t";
+            ContentPlaceHolder1_req_ddlYear.errormessage = "Please Passing Year";
+            ContentPlaceHolder1_req_ddlYear.display = "Dynamic";
+            ContentPlaceHolder1_req_ddlYear.validationGroup = "a";
+            ContentPlaceHolder1_req_ddlYear.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_req_ddlYear.initialvalue = "0";
+            var ContentPlaceHolder1_RequiredFieldValidator1 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator1"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator1");
+            ContentPlaceHolder1_RequiredFieldValidator1.controltovalidate = "ContentPlaceHolder1_txtCname";
+            ContentPlaceHolder1_RequiredFieldValidator1.focusOnError = "t";
+            ContentPlaceHolder1_RequiredFieldValidator1.errormessage = "Please Enter Candidate Name";
+            ContentPlaceHolder1_RequiredFieldValidator1.display = "Dynamic";
+            ContentPlaceHolder1_RequiredFieldValidator1.validationGroup = "a";
+            ContentPlaceHolder1_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_RequiredFieldValidator1.initialvalue = "";
+            var ContentPlaceHolder1_RequiredFieldValidator2 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator2"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator2");
+            ContentPlaceHolder1_RequiredFieldValidator2.controltovalidate = "ContentPlaceHolder1_ddlYear";
+            ContentPlaceHolder1_RequiredFieldValidator2.focusOnError = "t";
+            ContentPlaceHolder1_RequiredFieldValidator2.errormessage = "Please Enter Father Name";
+            ContentPlaceHolder1_RequiredFieldValidator2.display = "Dynamic";
+            ContentPlaceHolder1_RequiredFieldValidator2.validationGroup = "a";
+            ContentPlaceHolder1_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_RequiredFieldValidator2.initialvalue = "0";
+            var ContentPlaceHolder1_RequiredFieldValidator3 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator3"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator3");
+            ContentPlaceHolder1_RequiredFieldValidator3.controltovalidate = "ContentPlaceHolder1_txtMobileNo";
+            ContentPlaceHolder1_RequiredFieldValidator3.focusOnError = "t";
+            ContentPlaceHolder1_RequiredFieldValidator3.errormessage = "Please Enter Mobile No";
+            ContentPlaceHolder1_RequiredFieldValidator3.display = "Dynamic";
+            ContentPlaceHolder1_RequiredFieldValidator3.validationGroup = "a";
+            ContentPlaceHolder1_RequiredFieldValidator3.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_RequiredFieldValidator3.initialvalue = "";
+            var ContentPlaceHolder1_RequiredFieldValidator5 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator5"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator5");
+            ContentPlaceHolder1_RequiredFieldValidator5.controltovalidate = "ContentPlaceHolder1_txtverifymobileotp";
+            ContentPlaceHolder1_RequiredFieldValidator5.focusOnError = "t";
+            ContentPlaceHolder1_RequiredFieldValidator5.errormessage = "Please Enter Verify OTP";
+            ContentPlaceHolder1_RequiredFieldValidator5.display = "Dynamic";
+            ContentPlaceHolder1_RequiredFieldValidator5.validationGroup = "a";
+            ContentPlaceHolder1_RequiredFieldValidator5.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_RequiredFieldValidator5.initialvalue = "";
+            var ContentPlaceHolder1_RequiredFieldValidator4 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator4"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator4");
+            ContentPlaceHolder1_RequiredFieldValidator4.controltovalidate = "ContentPlaceHolder1_txtEmail";
+            ContentPlaceHolder1_RequiredFieldValidator4.focusOnError = "t";
+            ContentPlaceHolder1_RequiredFieldValidator4.errormessage = "Please Enter Email ID";
+            ContentPlaceHolder1_RequiredFieldValidator4.display = "Dynamic";
+            ContentPlaceHolder1_RequiredFieldValidator4.validationGroup = "a";
+            ContentPlaceHolder1_RequiredFieldValidator4.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_RequiredFieldValidator4.initialvalue = "0";
+            var ContentPlaceHolder1_RequiredFieldValidator6 = document.all ? document.all["ContentPlaceHolder1_RequiredFieldValidator6"] : document.getElementById("ContentPlaceHolder1_RequiredFieldValidator6");
+            ContentPlaceHolder1_RequiredFieldValidator6.controltovalidate = "ContentPlaceHolder1_txtverifyemailotp";
+            ContentPlaceHolder1_RequiredFieldValidator6.focusOnError = "t";
+            ContentPlaceHolder1_RequiredFieldValidator6.errormessage = "Please Enter Verify OTP";
+            ContentPlaceHolder1_RequiredFieldValidator6.display = "Dynamic";
+            ContentPlaceHolder1_RequiredFieldValidator6.validationGroup = "a";
+            ContentPlaceHolder1_RequiredFieldValidator6.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_RequiredFieldValidator6.initialvalue = "";
+            var req_ddlCountry = document.all ? document.all["req_ddlCountry"] : document.getElementById("req_ddlCountry");
+            req_ddlCountry.controltovalidate = "ContentPlaceHolder1_ddlCountry";
+            req_ddlCountry.focusOnError = "t";
+            req_ddlCountry.errormessage = "Please select country.";
+            req_ddlCountry.display = "Dynamic";
+            req_ddlCountry.validationGroup = "b";
+            req_ddlCountry.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            req_ddlCountry.initialvalue = "0";
+            var ContentPlaceHolder1_req_txtAddress1 = document.all ? document.all["ContentPlaceHolder1_req_txtAddress1"] : document.getElementById("ContentPlaceHolder1_req_txtAddress1");
+            ContentPlaceHolder1_req_txtAddress1.controltovalidate = "ContentPlaceHolder1_txtAddress1";
+            ContentPlaceHolder1_req_txtAddress1.focusOnError = "t";
+            ContentPlaceHolder1_req_txtAddress1.errormessage = "Address should not be empty.";
+            ContentPlaceHolder1_req_txtAddress1.display = "Dynamic";
+            ContentPlaceHolder1_req_txtAddress1.validationGroup = "b";
+            ContentPlaceHolder1_req_txtAddress1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_req_txtAddress1.initialvalue = "";
+            var ContentPlaceHolder1_req_txtAddress2 = document.all ? document.all["ContentPlaceHolder1_req_txtAddress2"] : document.getElementById("ContentPlaceHolder1_req_txtAddress2");
+            ContentPlaceHolder1_req_txtAddress2.controltovalidate = "ContentPlaceHolder1_txtAddress2";
+            ContentPlaceHolder1_req_txtAddress2.focusOnError = "t";
+            ContentPlaceHolder1_req_txtAddress2.errormessage = "Address should not be empty.";
+            ContentPlaceHolder1_req_txtAddress2.display = "Dynamic";
+            ContentPlaceHolder1_req_txtAddress2.validationGroup = "b";
+            ContentPlaceHolder1_req_txtAddress2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_req_txtAddress2.initialvalue = "";
+            var req_ddlState = document.all ? document.all["req_ddlState"] : document.getElementById("req_ddlState");
+            req_ddlState.controltovalidate = "ContentPlaceHolder1_ddlState";
+            req_ddlState.focusOnError = "t";
+            req_ddlState.errormessage = "Please select State.";
+            req_ddlState.display = "Dynamic";
+            req_ddlState.validationGroup = "b";
+            req_ddlState.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            req_ddlState.initialvalue = "0";
+            var req_ddlDistrict = document.all ? document.all["req_ddlDistrict"] : document.getElementById("req_ddlDistrict");
+            req_ddlDistrict.controltovalidate = "ContentPlaceHolder1_ddlDistrict";
+            req_ddlDistrict.focusOnError = "t";
+            req_ddlDistrict.errormessage = "Please select District.";
+            req_ddlDistrict.display = "Dynamic";
+            req_ddlDistrict.validationGroup = "b";
+            req_ddlDistrict.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            req_ddlDistrict.initialvalue = "0";
+            var ContentPlaceHolder1_req_ddlPincode = document.all ? document.all["ContentPlaceHolder1_req_ddlPincode"] : document.getElementById("ContentPlaceHolder1_req_ddlPincode");
+            ContentPlaceHolder1_req_ddlPincode.controltovalidate = "ContentPlaceHolder1_ddlPincode";
+            ContentPlaceHolder1_req_ddlPincode.focusOnError = "t";
+            ContentPlaceHolder1_req_ddlPincode.errormessage = "Please select pincode.";
+            ContentPlaceHolder1_req_ddlPincode.display = "Dynamic";
+            ContentPlaceHolder1_req_ddlPincode.validationGroup = "b";
+            ContentPlaceHolder1_req_ddlPincode.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_req_ddlPincode.initialvalue = "0";
+            var ContentPlaceHolder1_req_txtPincode = document.all ? document.all["ContentPlaceHolder1_req_txtPincode"] : document.getElementById("ContentPlaceHolder1_req_txtPincode");
+            ContentPlaceHolder1_req_txtPincode.controltovalidate = "ContentPlaceHolder1_txtPincode";
+            ContentPlaceHolder1_req_txtPincode.display = "Dynamic";
+            ContentPlaceHolder1_req_txtPincode.isvalid = "False";
+            ContentPlaceHolder1_req_txtPincode.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_req_txtPincode.initialvalue = "";
+            var reg_txtPincode = document.all ? document.all["reg_txtPincode"] : document.getElementById("reg_txtPincode");
+            reg_txtPincode.controltovalidate = "ContentPlaceHolder1_txtPincode";
+            reg_txtPincode.display = "Dynamic";
+            reg_txtPincode.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+            var req_txtMobile = document.all ? document.all["req_txtMobile"] : document.getElementById("req_txtMobile");
+            req_txtMobile.controltovalidate = "ContentPlaceHolder1_txtMobile";
+            req_txtMobile.focusOnError = "t";
+            req_txtMobile.errormessage = "Please enter mobile no.";
+            req_txtMobile.display = "Dynamic";
+            req_txtMobile.validationGroup = "b";
+            req_txtMobile.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            req_txtMobile.initialvalue = "";
+            var reg_txtMobile = document.all ? document.all["reg_txtMobile"] : document.getElementById("reg_txtMobile");
+            reg_txtMobile.controltovalidate = "ContentPlaceHolder1_txtMobile";
+            reg_txtMobile.focusOnError = "t";
+            reg_txtMobile.errormessage = "Invalid Mobile Number.";
+            reg_txtMobile.display = "Dynamic";
+            reg_txtMobile.validationGroup = "b";
+            reg_txtMobile.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+            reg_txtMobile.validationexpression = "^[6-9][0-9]{9}$";
+            var req_rpdispatchmode = document.all ? document.all["req_rpdispatchmode"] : document.getElementById("req_rpdispatchmode");
+            req_rpdispatchmode.controltovalidate = "ContentPlaceHolder1_rpdispatchmode";
+            req_rpdispatchmode.focusOnError = "t";
+            req_rpdispatchmode.errormessage = "Please enter mobile no.";
+            req_rpdispatchmode.display = "Dynamic";
+            req_rpdispatchmode.validationGroup = "b";
+            req_rpdispatchmode.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            req_rpdispatchmode.initialvalue = "";
+            var ContentPlaceHolder1_req_fu_photo_id = document.all ? document.all["ContentPlaceHolder1_req_fu_photo_id"] : document.getElementById("ContentPlaceHolder1_req_fu_photo_id");
+            ContentPlaceHolder1_req_fu_photo_id.controltovalidate = "ContentPlaceHolder1_fu_photo_id";
+            ContentPlaceHolder1_req_fu_photo_id.focusOnError = "t";
+            ContentPlaceHolder1_req_fu_photo_id.errormessage = "Please Choose mention Photo Id proof";
+            ContentPlaceHolder1_req_fu_photo_id.display = "Dynamic";
+            ContentPlaceHolder1_req_fu_photo_id.validationGroup = "c";
+            ContentPlaceHolder1_req_fu_photo_id.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+            ContentPlaceHolder1_req_fu_photo_id.initialvalue = "";
+            //]]>
+        </script>
+
+
+        <script type="text/javascript">
+            //<![CDATA[
+
+            var Page_ValidationActive = false;
+            if (typeof (ValidatorOnLoad) == "function") {
+                ValidatorOnLoad();
+            }
+
+            function ValidatorOnSubmit() {
+                if (Page_ValidationActive) {
+                    return ValidatorCommonOnSubmit();
+                }
+                else {
+                    return true;
+                }
+            }
+
+            document.getElementById('ContentPlaceHolder1_req_ddlClass').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_req_ddlClass'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_req_txtRollNo').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_req_txtRollNo'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_req_ddlYear').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_req_ddlYear'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_RequiredFieldValidator1').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator1'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_RequiredFieldValidator2').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator2'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_RequiredFieldValidator3').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator3'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_RequiredFieldValidator5').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator5'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_RequiredFieldValidator4').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator4'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_RequiredFieldValidator6').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_RequiredFieldValidator6'));
+            }
+
+            document.getElementById('req_ddlCountry').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('req_ddlCountry'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_req_txtAddress1').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_req_txtAddress1'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_req_txtAddress2').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_req_txtAddress2'));
+            }
+
+            document.getElementById('req_ddlState').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('req_ddlState'));
+            }
+
+            document.getElementById('req_ddlDistrict').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('req_ddlDistrict'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_req_ddlPincode').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_req_ddlPincode'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_req_txtPincode').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_req_txtPincode'));
+            }
+
+            document.getElementById('reg_txtPincode').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('reg_txtPincode'));
+            }
+
+            document.getElementById('req_txtMobile').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('req_txtMobile'));
+            }
+
+            document.getElementById('reg_txtMobile').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('reg_txtMobile'));
+            }
+
+            document.getElementById('req_rpdispatchmode').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('req_rpdispatchmode'));
+            }
+
+            document.getElementById('ContentPlaceHolder1_req_fu_photo_id').dispose = function () {
+                Array.remove(Page_Validators, document.getElementById('ContentPlaceHolder1_req_fu_photo_id'));
+            }
+            //]]>
+        </script>
+    </form>
+</body>
+
+</html>

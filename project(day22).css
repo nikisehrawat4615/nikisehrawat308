@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+#number-container {
+    display: grid;
+    grid-template-columns: repeat(7, 50px);
+    grid-gap: 5px;
+    margin-top: 20px;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+.prime {
+    background-color: rgb(209, 50, 50);
+}
+
+.even {
+    background-color: rgb(41, 136, 41);
+}
+
+.odd {
+    background-color: rgb(196, 196, 52);
+}

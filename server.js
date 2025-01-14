@@ -1,32 +1,26 @@
-const express = require('express');
-const { auth, requiresAuth } = require('express-openid-connect');
+import express from 'express';
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
+
+// MongoDB connection setup
+mongoose.connect('mongodb://localhost:27017/feedback_db', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
+
 const app = express();
+app.use(bodyParser.json());
 
-const config = {
-  authRequired: false,
-  auth0Logout: true,
-  baseURL: 'http://localhost:3000',
-  clientID: 'ccXXH2S0UaF1E2CVBmMC6H7HY53BP9z8',
-  issuerBaseURL: 'https://dev-bltimhbax2e1wnmt.us.auth0.com',
-  secret: 'LONG_RANDOM_STRING'
-};
+// Controller for inserting quality scores
+import { insertQualityScores } from './controllers/qualityScoresController.js';
 
-// The auth router attaches /login, /logout
-// and /callback routes to the baseURL
-app.use(auth(config));
+// Route to insert quality scores
+app.post('/qualityscores', insertQualityScores);
 
-// req.oidc.isAuthenticated is provided from the auth router
-app.get('/', (req, res) => {
-  res.send(
-    req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out'
-  )
+// Import and use the teacherScoresRouter
+import teacherScoresRouter from './routes/teacherScoresRouter.js';
+app.use('/api', teacherScoresRouter);
+
+// Start the server
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
 });
-
-// The /profile route will show the user profile as JSON
-app.get('/profile', requiresAuth(), (req, res) => {
-    res.send(JSON.stringify(req.oidc.user, null, 2));
-  });
-  
-  app.listen(3000, function() {
-    console.log('Listening on http://localhost:3000');
-  });
